@@ -18,9 +18,9 @@ hero:
     - theme: alt
       text: กราบ Nacnano
       link: https://github.com/Nacnano/my-chula-courses
-    # - theme: alt
-    #   text: กราบ mark48853
-    #   link: https://github.com/mark48853/2110101-com-prog
+    - theme: alt
+      text: กราบ mark48853
+      link: https://github.com/mark48853/2110211-intro-data-struct
     # - theme: alt
     #   text: กราบ shalluv
     #   link: https://github.com/shalluv/2110101-com-prog
