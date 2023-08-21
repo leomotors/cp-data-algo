@@ -79,7 +79,8 @@
     "numeric": "cpp",
     "random": "cpp",
     "utility": "cpp",
-    "stop_token": "cpp"
+    "stop_token": "cpp",
+    "set": "cpp"
   },
   "C_Cpp.default.compilerPath": "/opt/homebrew/bin/g++-13"
 }
