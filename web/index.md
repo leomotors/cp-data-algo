@@ -27,4 +27,12 @@ hero:
     - theme: alt
       text: Leaked Exam
       link: https://www.reg.chula.ac.th/form/jt31.pdf
+
+features:
+  - icon: 🥗
+    title: วิชานี้คือวิชาอะไร
+    details: Intro Data Struct เป็นวิชาที่ 🥗 ปี 2 เรียน
+  - icon: 👍
+    title: รับประกันคุณภาพโค้ด
+    details: "`using namespace std;` is cursed. ดังนั้นเราจะไม่ใช้"
 ---

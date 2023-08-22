@@ -37,7 +37,7 @@ export default defineConfig({
         text: "Introduction",
         items: [
           {
-            text: "Hello World",
+            text: "vtwi;t",
             link: "/introduction/",
           },
         ],

@@ -1,7 +1,12 @@
 import fs from "node:fs/promises";
 import type { DefaultTheme } from "vitepress";
 
-type Builder = (file: string, child: string) => string;
+import { exec as _exec } from "node:child_process";
+import { promisify } from "node:util";
+
+const exec = promisify(_exec);
+
+type Builder = (file: string, child: string, date: string) => string;
 
 async function createMd(
   file: string,
@@ -12,6 +17,10 @@ async function createMd(
   const tokens = file.split(".");
   const ext = tokens[tokens.length - 1];
 
+  const { stdout: updatedStr } = await exec(
+    `git log -1 --pretty="format:%ci" ${folder}/${file}`,
+  );
+
   fs.writeFile(
     `web/${folder}/${file}.md`,
     builder(
@@ -21,6 +30,7 @@ async function createMd(
 ${(await fs.readFile(`${folder}/${file}`)).toString().trim()}
 \`\`\`
 `,
+      updatedStr && new Date(updatedStr).toLocaleString("th-TH"),
     ),
   );
 
@@ -50,11 +60,13 @@ async function writeFolder(folderName: string, builder: Builder) {
 
 writeFolder(
   "grader",
-  (file, child) => `
+  (file, child, date) => `
 # ${file}
 
 ${child}
 
 See on [GitHub](https://github.com/Leomotors/2110211-intro-data-struct/blob/main/grader/${file})
+
+${date && `Last Updated: ${date} (UTC+7)`}
 `,
 );
