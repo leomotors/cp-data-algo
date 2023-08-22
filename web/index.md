@@ -7,7 +7,7 @@ titleTemplate: Intro Data Struct
 hero:
   name: Intro Data Struct
   text: My Solutions
-  tagline: อย่าลอกครับ ทำเว็บไว้โชว์เฉย ๆ ไม่ได้ให้ลอก
+  tagline: น่าน เกียนหรือไม่ ❓❓❓
   actions:
     - theme: brand
       text: Start Tour
