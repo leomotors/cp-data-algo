@@ -80,7 +80,27 @@
     "random": "cpp",
     "utility": "cpp",
     "stop_token": "cpp",
-    "set": "cpp"
+    "set": "cpp",
+    "__tree": "cpp",
+    "any": "cpp",
+    "cfenv": "cpp",
+    "cinttypes": "cpp",
+    "codecvt": "cpp",
+    "csetjmp": "cpp",
+    "csignal": "cpp",
+    "cuchar": "cpp",
+    "coroutine": "cpp",
+    "forward_list": "cpp",
+    "fstream": "cpp",
+    "list": "cpp",
+    "map": "cpp",
+    "scoped_allocator": "cpp",
+    "stack": "cpp",
+    "typeindex": "cpp",
+    "valarray": "cpp",
+    "expected": "cpp",
+    "source_location": "cpp",
+    "ranges": "cpp"
   },
   "C_Cpp.default.compilerPath": "/opt/homebrew/bin/g++-13"
 }
