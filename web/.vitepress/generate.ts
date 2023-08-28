@@ -26,7 +26,7 @@ async function createMd(
     builder(
       file,
       `
-\`\`\`${ext == "hs" ? "haskell" : ext}
+\`\`\`${ext == "hpp" ? "cpp" : ext}
 ${(await fs.readFile(`${folder}/${file}`)).toString().trim()}
 \`\`\`
 `,
@@ -43,7 +43,7 @@ ${(await fs.readFile(`${folder}/${file}`)).toString().trim()}
 async function writeFolder(folderName: string, builder: Builder) {
   const sidebarItems: DefaultTheme.SidebarItem[] = [];
   const files = (await fs.readdir(folderName)).filter((file) =>
-    file.endsWith(".cpp"),
+    [".cpp", ".hpp"].some((ext) => file.endsWith(ext)),
   );
 
   for (const file of files) {
