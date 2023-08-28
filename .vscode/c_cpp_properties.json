@@ -3,7 +3,7 @@
     {
       "name": "Mac",
       "includePath": ["${workspaceFolder}/grader/**"],
-      "defines": [],
+      "defines": ["DEBUG", "_GLIBCXX_DEBUG"],
       "macFrameworkPath": [
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
       ],
@@ -11,6 +11,15 @@
       "cStandard": "c17",
       "cppStandard": "c++17",
       "intelliSenseMode": "macos-gcc-arm64"
+    },
+    {
+      "name": "Linux",
+      "includePath": ["${workspaceFolder}/grader/**"],
+      "defines": ["DEBUG", "_GLIBCXX_DEBUG"],
+      "compilerPath": "/usr/bin/g++",
+      "cStandard": "c17",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "linux-gcc-x64"
     }
   ],
   "version": 4
