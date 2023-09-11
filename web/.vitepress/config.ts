@@ -1,6 +1,7 @@
 import { defineConfig } from "vitepress";
 
 import graderItems from "./grader.g";
+import quizItems from "./quiz.g";
 
 export default defineConfig({
   lang: "th",
@@ -44,8 +45,13 @@ export default defineConfig({
       },
       {
         collapsed: false,
-        text: "Grader Solutions",
+        text: "My Grader Solutions",
         items: graderItems,
+      },
+      {
+        collapsed: false,
+        text: "My Quiz Solutions",
+        items: quizItems,
       },
     ],
   },

@@ -70,3 +70,16 @@ See on [GitHub](https://github.com/Leomotors/2110211-intro-data-struct/blob/main
 ${date && `Last Updated: ${date} (UTC+7)`}
 `,
 );
+
+writeFolder(
+  "quiz",
+  (file, child, date) => `
+# ${file}
+
+${child}
+
+See on [GitHub](https://github.com/Leomotors/2110211-intro-data-struct/blob/main/grader/${file})
+
+${date && `Last Updated: ${date} (UTC+7)`}
+`,
+);
