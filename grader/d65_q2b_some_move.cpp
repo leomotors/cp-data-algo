@@ -160,7 +160,7 @@ void CP::vector_some_move<T>::insert(int index, std::vector<T> &value) {
 
     mSize += value.size();
     mCap += value.size();
-    std::vector<T> newVector(value.size());
+    std::vector<T> newVector;
 
     // Update aux
     aux.push_back(aux.back() + value.size());
@@ -170,21 +170,24 @@ void CP::vector_some_move<T>::insert(int index, std::vector<T> &value) {
 
     auto &mDataI = mData[i];
 
-    // Apply data range to newVector
-    for (int k = 0; k < value.size(); k++) {
-        const auto data =
-            k > value.size() ? mDataI[k - value.size() + idx] : value[k];
-        newVector.push_back(data);
+    // Get data range
+    std::vector<T> newRange(value.cbegin(), value.cend());
+    for (int k = idx; k < mDataI.size(); k++) {
+        newRange.push_back(mDataI[k]);
     }
 
     // Apply data range to mData[i]
+
     for (int k = idx; k < mDataI.size(); k++) {
-        const auto data =
-            k - idx > value.size() ? mDataI[k - value.size()] : value[k - idx];
-        mDataI[k] = data;
+        mDataI[k] = newRange[k - idx];
     }
 
-    mData.insert(mData.cbegin() + i + 1, std::move(newVector));
+    // Apply data range to newVector
+    for (int k = mDataI.size() - idx; k < newRange.size(); k++) {
+        newVector.push_back(newRange[k]);
+    }
+
+    mData.insert(mData.cbegin() + i + 1, newVector);
 }
 
 #endif
