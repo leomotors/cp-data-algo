@@ -8,6 +8,13 @@ const exec = promisify(_exec);
 
 type Builder = (file: string, child: string, date: string) => string;
 
+const extensionOverrides = {
+  hpp: "cpp",
+  dig: "xml",
+};
+
+const allowedExtensions = ["cpp", "hpp", "dig"];
+
 async function createMd(
   file: string,
   folder: string,
@@ -26,7 +33,7 @@ async function createMd(
     builder(
       file,
       `
-\`\`\`${ext == "hpp" ? "cpp" : ext}
+\`\`\`${extensionOverrides[ext] ?? ext}
 ${(await fs.readFile(`${folder}/${file}`)).toString().trim()}
 \`\`\`
 `,
@@ -43,7 +50,7 @@ ${(await fs.readFile(`${folder}/${file}`)).toString().trim()}
 async function writeFolder(folderName: string, builder: Builder) {
   const sidebarItems: DefaultTheme.SidebarItem[] = [];
   const files = (await fs.readdir(folderName)).filter((file) =>
-    [".cpp", ".hpp"].some((ext) => file.endsWith(ext)),
+    allowedExtensions.some((ext) => file.endsWith(ext)),
   );
 
   for (const file of files) {
