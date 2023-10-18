@@ -8,7 +8,7 @@
 #include <stdexcept>
 #include <vector>
 
-//#pragma once
+// #pragma once
 
 namespace CP {
 
@@ -145,7 +145,7 @@ class vector_some_move {
 
 #endif
 
-// student.h
+#pragma region student.h
 #ifndef __STUDENT_H_
 #define __STUDENT_H_
 
@@ -191,6 +191,7 @@ void CP::vector_some_move<T>::insert(int index, std::vector<T> &value) {
 }
 
 #endif
+#pragma endregion student.h
 
 // main.cpp
 #ifdef DEBUG

@@ -15,6 +15,29 @@ const extensionOverrides = {
 
 const allowedExtensions = ["cpp", "hpp", "dig"];
 
+function getCodeContent(content: string) {
+  if (!content.includes("region student.h")) {
+    return content;
+  }
+
+  const regionLines: string[] = [];
+  const lines = content.split("\n");
+
+  let i = lines.findIndex((line) => line.includes("region student.h"));
+
+  while (i < lines.length) {
+    regionLines.push(lines[i]);
+
+    if (lines[i].includes("endregion")) {
+      break;
+    }
+
+    i++;
+  }
+
+  return regionLines.join("\n");
+}
+
 async function createMd(
   file: string,
   folder: string,
@@ -28,13 +51,17 @@ async function createMd(
     `git log -1 --pretty="format:%ci" ${folder}/${file}`,
   );
 
+  const fileContent = (await fs.readFile(`${folder}/${file}`))
+    .toString()
+    .trim();
+
   fs.writeFile(
     `web/${folder}/${file}.md`,
     builder(
       file,
       `
 \`\`\`${extensionOverrides[ext] ?? ext}
-${(await fs.readFile(`${folder}/${file}`)).toString().trim()}
+${getCodeContent(fileContent)}
 \`\`\`
 `,
       updatedStr && new Date(updatedStr).toLocaleString("th-TH"),

@@ -4,7 +4,7 @@
 
 #include <iostream>
 #include <stdexcept>
-//#pragma once
+// #pragma once
 
 namespace CP {
 
@@ -202,7 +202,7 @@ class vector {
 
 #endif
 
-// student.h
+#pragma region student.h
 #ifndef __STUDENT_H_
 #define __STUDENT_H_
 
@@ -221,6 +221,7 @@ void CP::vector<T>::mirror() {
 }
 
 #endif
+#pragma endregion student.h
 
 // main.cpp
 #ifdef DEBUG

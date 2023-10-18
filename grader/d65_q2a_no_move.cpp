@@ -4,7 +4,7 @@
 #include <iostream>
 #include <stdexcept>
 #include <vector>
-//#pragma once
+// #pragma once
 
 namespace CP {
 
@@ -119,6 +119,7 @@ class vector_no_move {
 }  // namespace CP
 #endif
 
+#pragma region student.h
 #ifndef __STUDENT_H_
 #define __STUDENT_H_
 
@@ -146,6 +147,7 @@ void CP::vector_no_move<T>::expand_hook() {
 }
 
 #endif
+#pragma endregion student.h
 
 #ifdef DEBUG
 #include <iostream>

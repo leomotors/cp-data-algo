@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <stdexcept>
-//#pragma once
+// #pragma once
 
 namespace CP {
 
@@ -204,7 +204,7 @@ class vector {
 
 #endif
 
-// student.h
+#pragma region student.h
 
 #ifndef __STUDENT_H_
 #define __STUDENT_H_
@@ -218,7 +218,9 @@ bool CP::vector<T>::valid_iterator(CP::vector<T>::iterator it) const {
 
 #endif
 
-// main.cpp
+#pragma endregion student.h
+
+// #pragmamain.cpp
 
 #ifdef DEBUG
 #include <iostream>

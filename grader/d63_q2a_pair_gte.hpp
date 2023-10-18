@@ -39,6 +39,7 @@ class pair {
 
 #endif
 
+#pragma region student.h
 #ifndef __STUDENT_H_
 #define __STUDENT_H_
 
@@ -49,3 +50,4 @@ bool CP::pair<T1, T2>::operator>=(const pair<T1, T2>& other) const {
 }
 
 #endif
+#pragma endregion student.h
