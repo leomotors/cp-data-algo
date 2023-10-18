@@ -14,7 +14,7 @@
     },
     {
       "name": "Linux",
-      "includePath": ["${workspaceFolder}/grader/**"],
+      // "includePath": ["${workspaceFolder}/grader/**"],
       "defines": ["DEBUG", "_GLIBCXX_DEBUG"],
       "compilerPath": "/usr/bin/g++",
       "cStandard": "c17",
