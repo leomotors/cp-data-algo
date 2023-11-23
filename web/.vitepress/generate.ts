@@ -112,7 +112,20 @@ writeFolder(
 
 ${child}
 
-See on [GitHub](https://github.com/Leomotors/2110211-intro-data-struct/blob/main/grader/${file})
+See on [GitHub](https://github.com/Leomotors/2110211-intro-data-struct/blob/main/quiz/${file})
+
+${date && `Last Updated: ${date} (UTC+7)`}
+`,
+);
+
+writeFolder(
+  "algo",
+  (file, child, date) => `
+# ${file}
+
+${child}
+
+See on [GitHub](https://github.com/Leomotors/2110211-intro-data-struct/blob/main/algo/${file})
 
 ${date && `Last Updated: ${date} (UTC+7)`}
 `,
