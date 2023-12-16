@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@8.9.2",
+  "packageManager": "pnpm@8.12.1",
   "scripts": {
     "gen": "TZ=Asia/Bangkok tsx web/.vitepress/generate.ts",
     "dev": "TZ=Asia/Bangkok vitepress dev web --port=3189",
@@ -11,10 +11,10 @@
   },
   "devDependencies": {
     "@leomotors/cocoa-vitepress-theme": "1.0.2",
-    "@types/node": "18.18.5",
-    "prettier": "3.0.3",
-    "tsx": "3.14.0",
-    "typescript": "5.2.2",
+    "@types/node": "20.10.4",
+    "prettier": "3.1.1",
+    "tsx": "4.6.2",
+    "typescript": "5.3.3",
     "vitepress": "1.0.0-rc.4"
   }
 }
