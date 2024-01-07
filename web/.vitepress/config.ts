@@ -46,18 +46,18 @@ export default defineConfig({
       },
       {
         collapsed: false,
-        text: "My Grader Solutions",
+        text: "Data Struct Grader",
         items: graderItems,
       },
       {
         collapsed: false,
-        text: "My Quiz Solutions",
-        items: quizItems,
+        text: "Algo Design Grader",
+        items: algoItems,
       },
       {
         collapsed: false,
-        text: "Algorithm Design",
-        items: algoItems,
+        text: "All Quiz",
+        items: quizItems,
       },
     ],
   },
