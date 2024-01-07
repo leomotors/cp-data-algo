@@ -6,8 +6,8 @@ import algoItems from "./algo.g";
 
 export default defineConfig({
   lang: "th",
-  title: "Intro Data Struct",
-  description: "Website containing my code for INTRO DATA STRUCT",
+  title: "CP Data Algo",
+  description: "Website containing my code for CP Data Algo",
   lastUpdated: true,
   outDir: "../dist",
 
@@ -24,12 +24,12 @@ export default defineConfig({
   themeConfig: {
     footer: {
       message: "Released under the MIT License",
-      copyright: "Copyright © 2023 Nutthapat Pongtanyavichai",
+      copyright: "Copyright © 2023-2024 Nutthapat Pongtanyavichai",
     },
     socialLinks: [
       {
         icon: "github",
-        link: "https://github.com/Leomotors/2110211-intro-data-struct",
+        link: "https://github.com/leomotors/cp-data-algo",
       },
     ],
 
