@@ -93,13 +93,13 @@ async function writeFolder(folderName: string, builder: Builder) {
 }
 
 writeFolder(
-  "grader",
+  "ds",
   (file, child, date) => `
 # ${file}
 
 ${child}
 
-See on [GitHub](https://github.com/Leomotors/2110211-intro-data-struct/blob/main/grader/${file})
+See on [GitHub](https://github.com/Leomotors/2110211-intro-data-struct/blob/main/ds/${file})
 
 ${date && `Last Updated: ${date} (UTC+7)`}
 `,

@@ -1,8 +1,8 @@
 import { defineConfig } from "vitepress";
 
-import graderItems from "./grader.g";
-import quizItems from "./quiz.g";
+import dsItems from "./ds.g";
 import algoItems from "./algo.g";
+import quizItems from "./quiz.g";
 
 export default defineConfig({
   lang: "th",
@@ -47,7 +47,7 @@ export default defineConfig({
       {
         collapsed: false,
         text: "Data Struct Grader",
-        items: graderItems,
+        items: dsItems,
       },
       {
         collapsed: false,

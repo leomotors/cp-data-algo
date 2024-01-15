@@ -1,9 +1,9 @@
 {
-  "name": "2110211.leomotors.me",
+  "name": "dataalgo.leomotors.me",
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@8.12.1",
+  "packageManager": "pnpm@8.14.1",
   "scripts": {
     "gen": "TZ=Asia/Bangkok tsx web/.vitepress/generate.ts",
     "dev": "TZ=Asia/Bangkok vitepress dev web --port=3189",
@@ -11,8 +11,8 @@
   },
   "devDependencies": {
     "@leomotors/cocoa-vitepress-theme": "1.0.2",
-    "@types/node": "20.10.6",
-    "prettier": "3.1.1",
+    "@types/node": "20.11.1",
+    "prettier": "3.2.2",
     "tsx": "4.7.0",
     "typescript": "5.3.3",
     "vitepress": "1.0.0-rc.4"
