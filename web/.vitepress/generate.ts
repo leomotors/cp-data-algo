@@ -13,7 +13,7 @@ const extensionOverrides = {
   dig: "xml",
 };
 
-const allowedExtensions = ["cpp", "hpp", "dig"];
+const allowedExtensions = ["c", "cpp", "hpp", "dig"];
 
 function getCodeContent(content: string) {
   if (!content.includes("region student.h")) {
